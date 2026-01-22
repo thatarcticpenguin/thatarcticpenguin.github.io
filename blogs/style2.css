@@ -1,0 +1,198 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #0a0a0a;
+}
+
+body {
+    background: #0a0a0a;
+    color: #e0e0e0;
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #333;
+}
+
+.logo {
+    color: #ffa500;
+    font-size: 1.2rem;
+}
+
+.logo::before {
+    content: '> ';
+}
+
+.logo::after {
+    content: ' |';
+}
+
+nav a {
+    color: #888;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ffa500;
+}
+
+.back-link {
+    display: inline-block;
+    color: #888;
+    text-decoration: none;
+    margin-bottom: 30px;
+    transition: color 0.3s;
+}
+
+.back-link::before {
+    content: '← ';
+}
+
+.back-link:hover {
+    color: #ffa500;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #fff;
+    font-weight: 600;
+}
+
+.meta {
+    color: #666;
+    margin-bottom: 40px;
+    font-size: 0.9rem;
+}
+
+.meta::before {
+    content: 'published: ';
+}
+
+.tag {
+    color: #4a9eff;
+    margin-left: 5px;
+}
+
+.content {
+    max-width: 900px;
+}
+
+.content p {
+    margin-bottom: 25px;
+    color: #ccc;
+}
+
+.content a {
+    color: #4a9eff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.content a:hover {
+    color: #6bb3ff;
+    text-decoration: underline;
+}
+
+h2 {
+    color: #fff;
+    font-size: 1.4rem;
+    margin: 40px 0 20px 0;
+    font-weight: 600;
+}
+
+.code-block {
+    background: #151515;
+    border: 1px solid #2a2a2a;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 25px 0;
+    overflow-x: auto;
+    position: relative;
+}
+
+.code-header {
+    color: #666;
+    font-size: 0.85rem;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #2a2a2a;
+}
+
+.code-block code {
+    color: #e0e0e0;
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.keyword {
+    color: #ff79c6;
+}
+
+.function {
+    color: #50fa7b;
+}
+
+.string {
+    color: #f1fa8c;
+}
+
+.type {
+    color: #8be9fd;
+}
+
+.comment {
+    color: #6272a4;
+}
+
+.copy-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #2a2a2a;
+    border: 1px solid #3a3a3a;
+    color: #888;
+    padding: 5px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: all 0.3s;
+}
+
+.copy-btn:hover {
+    background: #3a3a3a;
+    color: #ffa500;
+}
+
+.copy-btn.copied {
+    color: #50fa7b;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .code-block {
+        padding: 15px;
+    }
+}

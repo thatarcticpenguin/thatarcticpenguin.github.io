@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>thatarcticpenguin's blogs</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #0a0a0a;
+            color: #e0e0e0;
+            font-family: 'Courier New', monospace;
+            min-height: 100vh;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        nav {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 3rem;
+            font-size: 1.1rem;
+        }
+
+        nav a {
+            color: #888;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #fff;
+        }
+
+        h1 {
+            color: #fff;
+            padding: 1.5rem 2rem;
+            padding-left: -2rem;
+            margin-bottom: 3rem;
+            font-size: 2.5rem;
+            letter-spacing: 1px;
+        }
+
+        .blog-post {
+            background: #151515;
+            border: 1px solid #2a2a2a;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .blog-post:hover {
+            border-color: #8b4513;
+            box-shadow: 0 0 30px rgba(139, 69, 19, 0.4);
+            transform: translateY(-2px);
+            background: #1a1a1a;
+        }
+
+        .blog-title {
+            color: #ff9800;
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .blog-post:hover .blog-title {
+            color: #ffb74d;
+            text-shadow: 0 0 10px rgba(255, 152, 0, 0.5);
+        }
+
+        .blog-subtitle {
+            color: #666;
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+
+        .blog-meta {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .blog-date {
+            color: #888;
+            font-size: 0.9rem;
+        }
+
+        .blog-tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background: #2a2a2a;
+            color: #888;
+            padding: 0.3rem 0.8rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            border: 1px solid #333;
+            transition: all 0.3s ease;
+        }
+
+        .blog-post:hover .tag {
+            background: #333;
+            border-color: #8b4513;
+            color: #ff9800;
+        }
+
+        .bullet {
+            color: #ff9800;
+            margin-right: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+                padding: 1rem 1.5rem;
+            }
+
+            .blog-post {
+                padding: 1.5rem;
+            }
+
+            .blog-title {
+                font-size: 1.4rem;
+            }
+        }
+
+        .blog-link {
+        text-decoration: none;
+        color: inherit;
+        display: block;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <a href="/">Penguin</a>
+            <a href="/blogs">/blogs</a>
+        </nav>
+
+        <h1>thatarcticpenguin's blogs</h1>
+
+    <a href="intro.html" class="blog-link">
+    <div class="blog-post">
+        <div class="blog-title">
+        <span class="bullet">•</span>Just about me
+        </div>
+        <div class="blog-subtitle">introducing myself</div>
+        <div class="blog-meta">
+        <span class="blog-date">Jan 22 2025</span>
+        <span style="color: #444;">•</span>
+        <div class="blog-tags">
+            <span class="tag">about</span>
+            <span class="tag">dev</span>
+            <span class="tag">life</span>
+        </div>
+        </div>
+    </div>
+    </a>
+</body>
+</html>

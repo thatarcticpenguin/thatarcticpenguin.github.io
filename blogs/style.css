@@ -1,0 +1,146 @@
+/* =========================
+   PAGE BASE
+========================= */
+
+body {
+  margin: 0;
+  background: #0b0d0e;
+  color: #eaeaea;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+/* =========================
+   PATH / BREADCRUMB
+========================= */
+
+.path {
+  font-size: 0.75rem;
+  color: #7c7c7c;
+  letter-spacing: 0.08em;
+  margin: 2.5rem 2.5rem 1.2rem;
+}
+
+/* =========================
+   BLOG TITLE
+========================= */
+
+h1 {
+  font-size: 2.6rem;
+  font-weight: 600;
+  letter-spacing: -0.04em;
+  margin: 0 2.5rem 2.8rem;
+  color: #f0f0f0;
+  position: relative;
+}
+
+h1::after {
+  content: "";
+  display: block;
+  width: 140px;
+  height: 1px;
+  margin-top: 0.9rem;
+  background: linear-gradient(
+    to right,
+    rgba(255,255,255,0.25),
+    transparent
+  );
+}
+
+/* =========================
+   BLOG LIST
+========================= */
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 2.5rem;
+  max-width: 720px;
+}
+
+/* =========================
+   BLOG ENTRY
+========================= */
+
+li {
+  padding: 1.6rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+/* =========================
+   POST TITLE LINK
+========================= */
+
+li > a {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #eaeaea;
+  text-decoration: none;
+  display: inline-block;
+  transition: color 0.2s ease;
+}
+
+li > a:hover {
+  color: #9cc9ff;
+  text-shadow: 0 0 12px rgba(156,201,255,0.25);
+}
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+li > p {
+  margin: 0.35rem 0 0.6rem;
+  font-size: 0.9rem;
+  color: #a8a8a8;
+  max-width: 560px;
+}
+
+/* =========================
+   META ROW
+========================= */
+
+li > span {
+  font-size: 0.75rem;
+  color: #7a7a7a;
+  margin-right: 0.5rem;
+}
+
+/* tags */
+li > span:not(:first-of-type) {
+  padding: 0.12rem 0.45rem;
+  border-radius: 4px;
+  background: rgba(255,255,255,0.06);
+  color: #cfcfcf;
+  font-size: 0.7rem;
+}
+
+/* =========================
+   HOVER FEEL (SUBTLE)
+========================= */
+
+li:hover {
+  background: linear-gradient(
+    to right,
+    rgba(255,255,255,0.03),
+    transparent 60%
+  );
+}
+
+/* =========================
+   EMPTY SPACE BALANCE
+========================= */
+
+body::after {
+  content: "";
+  display: block;
+  height: 20vh;
+}
+
+/* =========================
+   SELECTION
+========================= */
+
+::selection {
+  background: rgba(156,201,255,0.25);
+  color: #fff;
+}
