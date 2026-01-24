@@ -33,11 +33,11 @@ header {
 }
 
 .logo::before {
-    content: '> ';
+    content: 'sudo ';
 }
 
 .logo::after {
-    content: ' |';
+    content: ' >>';
 }
 
 nav a {
