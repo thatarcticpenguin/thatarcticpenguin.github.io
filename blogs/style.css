@@ -1,146 +1,246 @@
-/* =========================
-   PAGE BASE
-========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
-  margin: 0;
-  background: #0b0d0e;
-  color: #eaeaea;
-  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    background: #0a0a0a;
+    color: #e0e0e0;
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+    min-height: 100vh;
+    padding: 2rem;
 }
 
-/* =========================
-   PATH / BREADCRUMB
-========================= */
-
-.path {
-  font-size: 0.75rem;
-  color: #7c7c7c;
-  letter-spacing: 0.08em;
-  margin: 2.5rem 2.5rem 1.2rem;
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 5;
 }
 
-/* =========================
-   BLOG TITLE
-========================= */
+nav {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    font-size: 1.1rem;
+}
+
+nav a {
+    color: #888;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #ffa500;
+}
 
 h1 {
-  font-size: 2.6rem;
-  font-weight: 600;
-  letter-spacing: -0.04em;
-  margin: 0 2.5rem 2.8rem;
-  color: #f0f0f0;
-  position: relative;
+    color: #fff;
+    padding: 1.5rem 0;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+    letter-spacing: 1px;
 }
 
-h1::after {
-  content: "";
-  display: block;
-  width: 140px;
-  height: 1px;
-  margin-top: 0.9rem;
-  background: linear-gradient(
-    to right,
-    rgba(255,255,255,0.25),
-    transparent
-  );
+.blogs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
 }
 
-/* =========================
-   BLOG LIST
-========================= */
-
-ul {
-  list-style: none;
-  padding: 0;
-  margin: 0 2.5rem;
-  max-width: 720px;
+.blog-link {
+    text-decoration: none;
+    color: inherit;
 }
 
-/* =========================
-   BLOG ENTRY
-========================= */
-
-li {
-  padding: 1.6rem 0;
-  border-bottom: 1px solid rgba(255,255,255,0.06);
+.blog-card {
+    background: #151515;
+    border: 1px solid #2a2a2a;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
-/* =========================
-   POST TITLE LINK
-========================= */
-
-li > a {
-  font-size: 1.25rem;
-  font-weight: 500;
-  color: #eaeaea;
-  text-decoration: none;
-  display: inline-block;
-  transition: color 0.2s ease;
+.blog-card:hover {
+    border-color: #ffa500;
+    box-shadow: 0 8px 32px rgba(255, 165, 0, 0.2);
+    transform: translateY(-4px);
 }
 
-li > a:hover {
-  color: #9cc9ff;
-  text-shadow: 0 0 12px rgba(156,201,255,0.25);
+.blog-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    background: #0a0a0a;
+    position: relative;
 }
 
-/* =========================
-   DESCRIPTION
-========================= */
-
-li > p {
-  margin: 0.35rem 0 0.6rem;
-  font-size: 0.9rem;
-  color: #a8a8a8;
-  max-width: 560px;
+.blog-image::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #ffa500, #ff8c00, #ffa500);
 }
 
-/* =========================
-   META ROW
-========================= */
-
-li > span {
-  font-size: 0.75rem;
-  color: #7a7a7a;
-  margin-right: 0.5rem;
+.blog-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
 }
 
-/* tags */
-li > span:not(:first-of-type) {
-  padding: 0.12rem 0.45rem;
-  border-radius: 4px;
-  background: rgba(255,255,255,0.06);
-  color: #cfcfcf;
-  font-size: 0.7rem;
+.blog-card:hover .blog-image img {
+    transform: scale(1.05);
 }
 
-/* =========================
-   HOVER FEEL (SUBTLE)
-========================= */
-
-li:hover {
-  background: linear-gradient(
-    to right,
-    rgba(255,255,255,0.03),
-    transparent 60%
-  );
+.blog-content {
+    padding: 1.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
-/* =========================
-   EMPTY SPACE BALANCE
-========================= */
-
-body::after {
-  content: "";
-  display: block;
-  height: 20vh;
+.blog-title {
+    color: #ffa500;
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    transition: color 0.3s ease;
+    font-weight: 600;
 }
 
-/* =========================
-   SELECTION
-========================= */
+.bullet {
+    color: #ff8c00;
+    margin-right: 0.5rem;
+}
 
-::selection {
-  background: rgba(156,201,255,0.25);
-  color: #fff;
+.blog-card:hover .blog-title {
+    color: #ffb74d;
+    text-shadow: 0 0 10px rgba(255, 165, 0, 0.3);
+}
+
+.blog-subtitle {
+    color: #888;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    font-style: italic;
+    line-height: 1.4;
+}
+
+.blog-meta {
+    color: #666;
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+}
+
+.blog-date {
+    color: #888;
+}
+
+.blog-tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-top: auto;
+}
+
+.tag {
+    background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
+    color: #ffa500;
+    padding: 0.4rem 0.9rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    border: 1px solid #333;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3),
+                inset 0 1px 0 rgba(255, 165, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.tag::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 165, 0, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.blog-card:hover .tag {
+    background: linear-gradient(135deg, #333 0%, #2a2a2a 100%);
+    border-color: #ffa500;
+    box-shadow: 0 4px 12px rgba(255, 165, 0, 0.3),
+                inset 0 1px 0 rgba(255, 165, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+.blog-card:hover .tag::before {
+    left: 100%;
+}
+
+@media (max-width: 1200px) {
+    .blogs-grid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+        padding: 1rem 0;
+    }
+
+    .blogs-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .blog-image {
+        height: 180px;
+    }
+
+    .blog-title {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .blog-content {
+        padding: 1.2rem;
+    }
+
+    .blog-tags {
+        gap: 0.4rem;
+    }
+
+    .tag {
+        padding: 0.3rem 0.7rem;
+        font-size: 0.7rem;
+    }
+}
+
+#snow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 6;
 }
