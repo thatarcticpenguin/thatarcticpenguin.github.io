@@ -33,28 +33,6 @@
 'Good luck.\n'
       },
 
-      '.bash_history': {
-        type: 'file', hidden: true,
-        content:
-'ls\n' +
-'ls -a\n' +
-'cat README.txt\n' +
-'cd projects/vault\n' +
-'git log\n' +
-'git show a3f9c2e\n' +
-'cd ~\n' +
-'ls -a notes/\n' +
-'nano notes/.hidden_note\n' +
-'imgview images/penguin.ascii\n' +
-'cat logs/server.log\n' +
-'echo "SWYgeW91IGNhbiByZWFkIHRoaXMsIFBBUlQ0PWQzM3A=" | base64 -d\n' +
-'env\n' +
-'echo "bm9ydGg=" | base64 -d\n' +
-'cd .vault\n' +
-'./unlock.sh\n' +
-'exit\n'
-      },
-
       'notes': {
         type: 'dir',
         children: {
