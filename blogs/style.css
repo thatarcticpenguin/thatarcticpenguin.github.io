@@ -33,7 +33,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #ffa500;
+    color: #f1efea;
 }
 
 h1 {
@@ -69,7 +69,7 @@ h1 {
 }
 
 .blog-card:hover {
-    border-color: #ffa500;
+    border-color: #f1efea;
     box-shadow: 0 8px 32px rgba(255, 165, 0, 0.2);
     transform: translateY(-4px);
 }
@@ -89,7 +89,7 @@ h1 {
     left: 0;
     right: 0;
     height: 4px;
-    background: linear-gradient(90deg, #ffa500, #ff8c00, #ffa500);
+    background: linear-gradient(90deg, #f1efea, #ff8c00, #f1efea);
 }
 
 .blog-image img {
@@ -111,7 +111,7 @@ h1 {
 }
 
 .blog-title {
-    color: #ffa500;
+    color: #f1efea;
     font-size: 1.4rem;
     margin-bottom: 0.5rem;
     transition: color 0.3s ease;
@@ -119,12 +119,12 @@ h1 {
 }
 
 .bullet {
-    color: #ff8c00;
+    color: #ffffff;
     margin-right: 0.5rem;
 }
 
 .blog-card:hover .blog-title {
-    color: #ffb74d;
+    color: #fff4cb;
     text-shadow: 0 0 10px rgba(255, 165, 0, 0.3);
 }
 
@@ -155,7 +155,7 @@ h1 {
 
 .tag {
     background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
-    color: #ffa500;
+    color: #f1efea;
     padding: 0.4rem 0.9rem;
     border-radius: 20px;
     font-size: 0.75rem;
@@ -180,7 +180,7 @@ h1 {
 
 .blog-card:hover .tag {
     background: linear-gradient(135deg, #333 0%, #2a2a2a 100%);
-    border-color: #ffa500;
+    border-color: #f1efea;
     box-shadow: 0 4px 12px rgba(255, 165, 0, 0.3),
                 inset 0 1px 0 rgba(255, 165, 0, 0.2);
     transform: translateY(-2px);
