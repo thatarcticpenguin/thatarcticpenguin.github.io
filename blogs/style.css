@@ -89,7 +89,7 @@ h1 {
     left: 0;
     right: 0;
     height: 4px;
-    background: linear-gradient(90deg, #f1efea, #ff8c00, #f1efea);
+    background: linear-gradient(90deg, #f1efea, #fff7ee, #f1efea);
 }
 
 .blog-image img {
